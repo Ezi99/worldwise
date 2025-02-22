@@ -1,30 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": "17806751"
-    },
-    {
       "cityName": "Berlin",
       "country": "Germany",
       "emoji": "🇩🇪",
@@ -35,78 +11,6 @@
         "lng": 13.376933665713324
       },
       "id": "98443197"
-    },
-    {
-      "id": "092a",
-      "cityName": "Zaragoza",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-02-20T19:37:47.102Z",
-      "notes": "",
-      "position": {
-        "lat": "41.623655390686395",
-        "lng": "-0.7910156250000001"
-      }
-    },
-    {
-      "id": "2112",
-      "cityName": "Bilbao",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-02-20T19:39:48.452Z",
-      "notes": "",
-      "position": {
-        "lat": "43.26120612479979",
-        "lng": "-2.9347229003906254"
-      }
-    },
-    {
-      "id": "f0a0",
-      "cityName": "Gasteiz / Vitoria",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-02-20T19:41:04.497Z",
-      "notes": "",
-      "position": {
-        "lat": "42.84526167558757",
-        "lng": "-2.673110961914063"
-      }
-    },
-    {
-      "id": "acf4",
-      "cityName": "Pina de Montalgrao",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-02-20T19:42:17.682Z",
-      "notes": "",
-      "position": {
-        "lat": "39.99395569397331",
-        "lng": "-0.6152343750000001"
-      }
-    },
-    {
-      "id": "d86b",
-      "cityName": "Agost",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-02-20T19:42:26.138Z",
-      "notes": "",
-      "position": {
-        "lat": "38.41055825094609",
-        "lng": "-0.6152343750000001"
-      }
-    },
-    {
-      "id": "bc5d",
-      "cityName": "Masegoso",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-02-11T19:43:46.000Z",
-      "notes": "",
-      "position": {
-        "lat": "38.788345355085625",
-        "lng": "-2.3291015625000004"
-      }
     }
   ]
 }
