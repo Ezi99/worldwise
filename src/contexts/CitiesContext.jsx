@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
 
 const CitiesContext = createContext();
 const BASE_URL = "http://localhost:9000";
@@ -63,30 +69,34 @@ function CitiesProvider({ children }) {
         const data = await res.json();
         dispatch({ type: "cities/loaded", payload: data });
       } catch (error) {
-        console.log(error.message);
         dispatch({ type: "rejected", payload: error.message });
       }
     }
     fetchCities();
   }, []);
 
-  async function getCity(id) {
-    dispatch({ type: "loading" });
-    try {
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      if (!res.ok) {
-        throw new Error(
-          `HTTP error! Status: ${res.status}, StatusText: ${res.statusText}`
-        );
-      }
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (currentCity.id === Number(id)) return;
 
-      const data = await res.json();
-      dispatch({ type: "city/loaded", dispatch: data });
-    } catch (error) {
-      console.log(error.message);
-      dispatch({ type: "rejected", payload: error.message });
-    }
-  }
+      dispatch({ type: "loading" });
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        if (!res.ok) {
+          throw new Error(
+            `HTTP error! Status: ${res.status}, StatusText: ${res.statusText}`
+          );
+        }
+
+        const data = await res.json();
+        dispatch({ type: "city/loaded", payload: data });
+      } catch (error) {
+        console.log(error.message);
+        dispatch({ type: "rejected", payload: error.message });
+      }
+    },
+    [currentCity.id]
+  );
 
   async function createCity(newCity) {
     dispatch({ type: "loading" });
